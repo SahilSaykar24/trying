@@ -1,0 +1,49 @@
+<html>
+
+<head>
+      <title> Even Odd Finder App </title>
+<script>
+           function check()
+{
+             event.preventDefault();
+             let num = document.getElementById("num");
+             let ans = document.getElementById("ans");
+             if(num.value=="")
+             {
+               alert("please a number");
+               num.focus();
+               ans.innerHTML="";
+               return;
+              }
+             let n = parseInt(num.value);
+let msg="";
+             if( n % 2 ==0)
+             {
+                msg="Even";
+             }
+                else
+             {
+                 msg="Odd";
+             }
+ans.innerHTML=msg;
+}
+</script>
+
+</head>
+
+<body>
+<center>
+       <div>
+            <a href="index.html">Home</a>
+            <a href="about.html" target="_blank">About</a>
+       </div>
+        <h1> Even Odd Finder App </h1>
+          <form onsubmit="check()">
+                <input type="number" placeholder="enter the integer" id="num"/>
+                <br/><br/>
+                 <input type="submit" value ="check"/>
+          </form>
+<h2 id="ans"></h2>
+</center>
+</body>
+</html>
